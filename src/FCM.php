@@ -1,9 +1,4 @@
 <?php
-	/**
-	 * Programmer: WHY
-	 * Date: 07/11/20
-	 * Time: 16.58
-	 */
 	
 	namespace ABSystem\Google;
 	
@@ -21,8 +16,9 @@
 		
 		public $response;
 		
+		
 		/**
-		 * FirebaseGCM constructor.
+		 * FCM constructor.
 		 * @param $configurations
 		 */
 		public function __construct ($configurations) {
@@ -86,6 +82,9 @@
 			return $this;
 		}
 		
+		/**
+		 * @throws \GuzzleHttp\Exception\GuzzleException
+		 */
 		public function kirim () {
 			$response = [];
 			var_dump($this->data_payload);
