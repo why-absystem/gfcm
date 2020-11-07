@@ -4,7 +4,7 @@ Google Firebase Cloud Messaging with PHP
 
 #### INSTALLATION :fire:
 
-`composer require absystem/wsbpjs`
+`composer require absystem/gfcm`
 
 #### REQUIREMENTS :warning: 
 
