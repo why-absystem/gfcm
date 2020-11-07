@@ -79,10 +79,7 @@
 			];
 			
 			if (!empty($this->data_payload)) {
-				foreach ($this->data_payload as $kdp => $dp) {
-					$this->data_payload["notification_foreground"] = "true";
-					$this->data_payload[$kdp]                      = $dp;
-				}
+				$this->data_payload["notification_foreground"] = "true";
 			}
 			$this->data_payload["message"] = $notification;
 			
@@ -143,7 +140,9 @@
 		 * @return $this
 		 */
 		public function setDataPayload ($data_payload) {
-			$this->data_payload = $data_payload;
+			foreach ($data_payload as $kdp => $vdp) {
+				$this->data_payload[$kdp] = $vdp;
+			}
 			return $this;
 		}
 		
