@@ -1,0 +1,21 @@
+{
+    "name": "absystem/firebase-gcm",
+    "type": "library",
+	"description": "PHP Google Cloud Messaging (GCM) Library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Wahyu Hidayat",
+            "email": "hidayatwahyu87@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+	"autoload": {
+		"psr-4": {
+			"ABSystem\\GFCM\\": "src/"
+		}
+	},
+	"require": {
+		"guzzlehttp/guzzle": "~6.0"
+	}
+}
