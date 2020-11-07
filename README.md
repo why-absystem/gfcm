@@ -1,5 +1,7 @@
 # GFCM
 
+Google Firebase Cloud Messaging with PHP
+
 #### INSTALLATION :fire:
 
 `composer require absystem/wsbpjs`
@@ -28,9 +30,9 @@ $tokendevice = [];
 #### CONTOH PENGGUNAAN :computer:
 ```php
 require_once __DIR__ . '/vendor/autoload.php';
-$fcm = new GFCM($configurations);
-$fcm->setTokenDevice($tokendevice);
-$fcm->setDataPayload([
+$gfcm = new GFCM($configurations);
+$gfcm->setTokenDevice($tokendevice);
+$gfcm->setDataPayload([
 	'koordinat' => [
 		'lat' => '-7.59779599999999977200104694929905235767364501953125',
 		'lng' => '110.9476973000000015190380509011447429656982421875',
@@ -39,6 +41,6 @@ $fcm->setDataPayload([
 		'page'=> '/map'
 	],
 ]);
-$fcm->setPesan('Judul Notifikasi', 'Isi pesan yang tampil.');
+$gfcm->setPesan('Judul Notifikasi', 'Isi pesan yang tampil.');
 
 ```
