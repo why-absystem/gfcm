@@ -30,6 +30,8 @@ $tokendevice = [];
 #### CONTOH PENGGUNAAN :computer:
 ```php
 require_once __DIR__ . '/vendor/autoload.php';
+use ABSystem\GFCM\GFCM;
+
 $gfcm = new GFCM($config);
 $gfcm->setTokenDevice($tokendevice);
 $gfcm->setDataPayload([
