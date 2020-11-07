@@ -1,5 +1,5 @@
 {
-    "name": "absystem/firebase-gcm",
+    "name": "absystem/gfcm",
     "type": "library",
 	"description": "PHP Google Cloud Messaging (GCM) Library",
     "license": "MIT",
