@@ -10,18 +10,8 @@
 	use GuzzleHttp\Client;
 	
 	class GFCM {
-		/**
-		 * Guzzle HTTP Client object
-		 * @var \GuzzleHttp\Client
-		 */
 		private $clients;
-		
-		/**
-		 * Request headers
-		 * @var array
-		 */
 		private $headers;
-		
 		private $server_key;
 		private $token_device;
 		private $authorization;
