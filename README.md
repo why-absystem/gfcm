@@ -30,11 +30,11 @@ $tokendevice = [];
 #### CONTOH PENGGUNAAN :computer:
 ```php
 require_once __DIR__ . '/vendor/autoload.php';
-use ABSystem\GFCM\GFCM;
+use ABSystem\Google\FCM;
 
-$gfcm = new GFCM($config);
-$gfcm->setTokenDevice($tokendevice);
-$gfcm->setDataPayload([
+$fcm = new FCM($config);
+$fcm->setTokenDevice($tokendevice);
+$fcm->setDataPayload([
 	'koordinat' => [
 		'lat' => '',
 		'lng' => '',
@@ -43,6 +43,7 @@ $gfcm->setDataPayload([
 		'page'=> '/map.html'
 	],
 ]);
-$gfcm->setPesan('Judul Notifikasi', 'Isi pesan yang tampil.');
+$fcm->setPesan('Judul Notifikasi', 'Isi pesan yang tampil.');
+$fcm->kirim();
 
 ```

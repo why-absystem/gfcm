@@ -12,7 +12,7 @@
     "minimum-stability": "dev",
 	"autoload": {
 		"psr-4": {
-			"ABSystem\\GFCM\\": "src/"
+			"ABSystem\\Google\\": "src/"
 		}
 	},
 	"require": {
