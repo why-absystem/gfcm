@@ -15,6 +15,7 @@
 		private $notification;
 		
 		public $response;
+		public $debug;
 		
 		
 		/**
@@ -87,7 +88,8 @@
 		 */
 		public function kirim () {
 			$response = [];
-			var_dump($this->data_payload);
+			if ($this->debug)
+				var_dump($this->data_payload);
 			foreach ($this->token_device as $token) {
 				$fcm        = [
 					'to'           => $token,
