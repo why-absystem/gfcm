@@ -34,11 +34,11 @@ $gfcm = new GFCM($config);
 $gfcm->setTokenDevice($tokendevice);
 $gfcm->setDataPayload([
 	'koordinat' => [
-		'lat' => '-7.59779599999999977200104694929905235767364501953125',
-		'lng' => '110.9476973000000015190380509011447429656982421875',
+		'lat' => '',
+		'lng' => '',
 	],
 	'link'	=> [
-		'page'=> '/map'
+		'page'=> '/map.html'
 	],
 ]);
 $gfcm->setPesan('Judul Notifikasi', 'Isi pesan yang tampil.');
