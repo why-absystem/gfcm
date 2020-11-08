@@ -87,16 +87,17 @@
 		 * @throws \GuzzleHttp\Exception\GuzzleException
 		 */
 		public function kirim () {
-			$response = [];
-			if ($this->debug)
-				var_dump($this->data_payload);
-			foreach ($this->token_device as $token) {
-				$fcm        = [
-					'to'           => $token,
-					'notification' => $this->notification,
-					'data'         => $this->data_payload
-				];
-				$response[] = $this->post('', json_encode($fcm));
+			$fcm            = [
+				'registration_ids' => $this->token_device,
+				'notification'     => $this->notification,
+				'data'             => $this->data_payload
+			];
+			$this->response = $this->post('', json_encode($fcm));
+			if ($this->debug) {
+				echo '<pre>' . json_encode(['request' => $fcm], JSON_PRETTY_PRINT) . '</pre>';
+				echo '<pre>';
+				print_r(json_encode(['response' => json_decode($this->response, TRUE)], JSON_PRETTY_PRINT));
+				echo '</pre>';
 			}
 		}
 		
