@@ -57,8 +57,12 @@
 		 * @return $this
 		 */
 		public function setTokenDevice ($tokendevice = []) {
-			foreach ($tokendevice as $item) {
-				$this->token_device[] = $item;
+			if (is_array($tokendevice)) {
+				foreach ($tokendevice as $item) {
+					$this->token_device[] = $item;
+				}
+			} else {
+				$this->token_device[] = $tokendevice;
 			}
 			return $this;
 		}
